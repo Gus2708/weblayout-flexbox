@@ -1,0 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    background: #0E6655;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+
+    /*flex*/
+    display: flex;
+    flex-flow: row wrap;
+}
+
+body{
+   background: #E9F7EF;
+}
+
+.main{
+    background: #f6faf8;
+    font-family: 'Alata', sans-serif;
+    flex:1 1 70%;
+    
+}
+
+.main article{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin: 15px;
+}
+
+.main article:nth-last-child(1){
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+header{
+    background: rgb(10, 77, 63);
+    width: 100%;
+    padding: 20px;
+
+    /*flex*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+header .logo{
+    color: #F4F6F6;
+    font-size: 30px;
+}
+
+header .logo a{
+    color: #f4f6f6;
+    text-decoration: none;
+    font-family: 'Karla', sans-serif;
+    margin: 5px;
+    line-height: 30px;
+}
+
+header nav{
+    
+    width: 50%;
+    border-radius: 5px;
+    /*flex*/
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    font-family: 'Overpass', sans-serif;
+    
+}
+
+header nav a{
+    background: #717D7E;
+    color: #f4f6f6;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+    /*flex*/
+    flex-grow: 1;
+}
+
+header nav a:hover{
+    background: rgb(99, 108, 109);
+
+}
+#code-logo{
+    width: 30px;
+    height: 30px;
+    border: none;
+    color: #BFC9CA;
+    font-size: 30px;
+    margin-right: 5px;
+    vertical-align: top;
+    
+}
+
+aside{
+    background: #717D7E;
+    flex: 1 1 30%;
+    /*flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 15px;
+}
+
+aside .widget{
+    background: #4D5656;
+    height: 150px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+aside .widget:hover{
+    background: #4D5656;
+    height: 150px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 2px 2px rgb(69, 77, 77);
+}
+
+footer{
+    background: rgb(10, 77, 63);
+    width: 100%;
+    padding: 10px;
+
+    /*flex*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+footer .links{
+    display: flex;
+    flex-wrap: wrap;
+    background: #717D7E ;
+    font-family: 'Overpass', sans-serif;
+    width: 50%;
+    
+}
+
+footer .links a{
+    flex-grow: 1;
+
+    background: #717D7E;
+    color: #f4f6f6;
+    text-decoration: none;
+    text-align: center;
+    padding: 20px 0;
+    
+    
+}
+
+footer .links a:hover{
+    background: rgb(99, 108, 109);
+    
+}
+
+footer .redes-sociales{
+    display: inline-flex;
+    flex-wrap: nowrap;
+    background: none;
+    width: 30%;
+    justify-content: center;
+    
+    
+}
+
+footer .icono{
+    color: #BFC9CA;
+    font-size: 30px;
+    margin: 10px;
+}
+
+footer .redes-sociales .instagram{
+    color: #BFC9CA ;
+}
+footer .redes-sociales .github{
+    color: #BFC9CA ;
+}
+footer .redes-sociales .facebook{
+    color: #BFC9CA ;
+}
+
+footer .redes-sociales .instagram:hover{
+    color: #cf2873 ;
+}
+footer .redes-sociales .github:hover{
+    color: #ffffff ;
+}
+footer .redes-sociales .facebook:hover{
+    color: #3b5998 ;
+}
+
+footer .creado-por{
+    display: block;
+    text-align: center;
+    color: #9b9b9b;
+    font-size: 16px;
+    font-family: 'Varela Round', sans-serif;
+    margin-top: 20px;
+    align-items: center;
+}
+
+footer .creado-por a{
+    color: rgba(115, 128, 139, 0.904);;
+    text-decoration: none;
+    
+}
+
+footer .creado-por a:hover{
+    color: rgb(95, 110, 121);
+    text-decoration: none;
+    
+    
+}
+
+@media screen and (max-width:800px){
+    .contenedor{
+        flex-direction: column;
+    }
+
+    header{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    header .logo{
+        margin: 20px 0;
+    }
+
+    header nav{
+        width: 100%;
+    }
+
+    aside {
+        flex-direction: row;
+        flex: 0;
+    }
+
+    aside .widget{
+        flex-grow: 1;
+}
+
+footer{
+    justify-content: space-around;
+    padding: 0;
+}
+
+footer .links{
+    width: 100%;
+    border-top: 2px solid rgb(99, 108, 109);
+}
+}
